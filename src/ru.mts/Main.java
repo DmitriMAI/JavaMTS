@@ -4,15 +4,15 @@ import java.math.RoundingMode;
 
 public class Main {
     public static void main(String[] args) {
-        ProductInformation productsInformation = new ProductInformation(10,3.49, 0.1);
+        ProductInformation productsInformation = new ProductInformation(10,3.49, 0,75);
         printCalculatedSumWithAndWithoutDiscount(productsInformation);
         productsInformation.setAmountOfProduct(30);
         productsInformation.setPriceOfProduct(5.99);
-        productsInformation.setDiscountPercent(20);
+        productsInformation.setDiscountPercent(42,575);
         printCalculatedSumWithAndWithoutDiscount(productsInformation);
         productsInformation.setAmountOfProduct(5);
         productsInformation.setPriceOfProduct(10.32);
-        productsInformation.setDiscountPercent(5.23);
+        productsInformation.setDiscountPercent(59,1);
         printCalculatedSumWithAndWithoutDiscount(productsInformation);
     }
     public static void printCalculatedSumWithAndWithoutDiscount(ProductInformation productsInformation){
