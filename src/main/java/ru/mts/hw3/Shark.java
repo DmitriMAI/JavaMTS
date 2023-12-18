@@ -5,7 +5,6 @@ import java.math.RoundingMode;
 
 public class Shark extends Predator{
     Shark(String name, double cost){
-        super();
         validateArguments(name, cost);
         this.breed = "Fish";
         this.name = name;

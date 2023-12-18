@@ -1,6 +1,4 @@
-package ru.mts;
-
-import ru.mts.hw3.CreateAnimalServiceImpl;
+package ru.mts.hw3;
 
 public class Main {
     public static void main(String[] args) {

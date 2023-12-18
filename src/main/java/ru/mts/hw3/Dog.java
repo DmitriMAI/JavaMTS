@@ -5,7 +5,6 @@ import java.math.RoundingMode;
 
 public class Dog extends Pet{
     Dog(String name, double cost){
-        super();
         validateArguments(name, cost);
         this.breed = "Doglike";
         this.name = name;
