@@ -1,4 +1,4 @@
-package ru.mts;
+package ru.mts.hw3;
 
 import java.util.concurrent.ThreadLocalRandom;
 

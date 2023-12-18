@@ -1,13 +1,13 @@
-package ru.mts;
+package ru.mts.hw3;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-public class Cat extends Pet{
-    Cat(String name, double cost){
+public class Wolf extends Predator{
+    Wolf(String name, double cost){
         super();
         validateArguments(name, cost);
-        this.breed = "Сatlike";
+        this.breed = "Wolfdog";
         this.name = name;
         this.cost = BigDecimal.valueOf(cost)
                 .setScale(2, RoundingMode.HALF_UP);
