@@ -37,7 +37,7 @@ public abstract class Pet extends AbstractAnimal {
     @Override
     public String toString() {
         DateTimeFormatter pattern = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-        return "Breed: " + getBreed() + " Name: " + getName()
-                + " Cost: " + getCost() + " Character: " + getCharacter() + " Birthday: " + getBirthDate().format(pattern);
+        return this.getClass().getSimpleName()+" (Breed: " + getBreed() + " Name: " + getName()
+                + " Cost: " + getCost() + " Character: " + getCharacter() + " Birthday: " + getBirthDate().format(pattern)+")";
     }
 }

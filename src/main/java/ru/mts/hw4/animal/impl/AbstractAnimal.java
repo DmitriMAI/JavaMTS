@@ -24,13 +24,13 @@ public abstract class AbstractAnimal implements Animal {
         if (this == obj) {
             return true;
         }
-        if (obj instanceof AbstractAnimal) {
-            AbstractAnimal abstractAnimal = (AbstractAnimal) obj;
-            return breed.equals(abstractAnimal.breed) && name.equals(abstractAnimal.name)
-                    && cost.equals(abstractAnimal.cost) && character.equals(abstractAnimal.character)
-                    && birthDate.equals(abstractAnimal.birthDate);
+        if (obj == null || getClass() != obj.getClass()){
+            return false;
         }
-        return false;
+        AbstractAnimal abstractAnimal = (AbstractAnimal) obj;
+        return breed.equals(abstractAnimal.breed) && name.equals(abstractAnimal.name)
+                && cost.equals(abstractAnimal.cost) && character.equals(abstractAnimal.character)
+                && birthDate.equals(abstractAnimal.birthDate);
     }
 
     /**
