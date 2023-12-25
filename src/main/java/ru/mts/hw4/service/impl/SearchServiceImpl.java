@@ -59,15 +59,11 @@ public class SearchServiceImpl implements SearchService {
         validateAnimals(animals);
         Map<Animal, Integer> animalDuplicates = new HashMap<>();
         Set<Animal> uniqueAnimals = new HashSet<>();
-        Animal[] animalFoundedDuplicates;
-        Integer[] animalFoundedDuplicatesNum;
 
         for (Animal animal : animals) {
             if (uniqueAnimals.contains(animal)) {
                 if (animalDuplicates.containsKey(animal)) {
-                    int val = animalDuplicates.get(animal) + 1;
-
-                    animalDuplicates.put(animal, val);
+                    animalDuplicates.put(animal, animalDuplicates.get(animal) + 1);
                 } else {
                     animalDuplicates.put(animal, 1);
                 }
@@ -75,11 +71,11 @@ public class SearchServiceImpl implements SearchService {
                 uniqueAnimals.add(animal);
             }
         }
-        animalFoundedDuplicates = animalDuplicates.keySet().toArray(new Animal[0]);
-        animalFoundedDuplicatesNum = animalDuplicates.values().toArray(new Integer[0]);
-
-        for (int i = 0; i < animalFoundedDuplicates.length; i++) {
-            System.out.println(animalFoundedDuplicates[i] + " duplicate - " + animalFoundedDuplicatesNum[i]);
+        if(animalDuplicates.isEmpty()){
+            System.out.println("There is no duplicates");
+        }
+        for (Map.Entry<Animal, Integer> entry : animalDuplicates.entrySet()) {
+            System.out.println(entry);
         }
     }
 

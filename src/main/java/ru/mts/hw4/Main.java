@@ -1,6 +1,8 @@
-package ru.mts.hw4.animal.impl;
+package ru.mts.hw4;
 
 import ru.mts.hw4.animal.Animal;
+import ru.mts.hw4.animal.impl.Shark;
+import ru.mts.hw4.animal.impl.Wolf;
 import ru.mts.hw4.service.impl.CreateAnimalServiceImpl;
 import ru.mts.hw4.service.impl.SearchServiceImpl;
 
@@ -18,7 +20,9 @@ public class Main {
                 new Wolf("D", 1, LocalDate.now()), new Shark("D", 1, LocalDate.now()),
                 new Shark("D", 1, LocalDate.now())};
 
-        System.out.println("Duplicates: ");
+        System.out.println("Duplicates with specific animals for testing: ");
+        searchService.findDuplicate(forTestingFindDuplicatesAnimals);
+        System.out.println("Duplicates with randomly generated animal: ");
         searchService.findDuplicate(generatedAnimals);
         System.out.println("Animals name born in leap year:");
         for (String name : returnedAnimalsNames) {
